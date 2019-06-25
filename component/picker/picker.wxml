@@ -1,0 +1,23 @@
+<!--自定义地区picker -->
+<view class="mask" wx:if="{{show}}" bindtap="cancel" catchtouchmove='preventTouchMove'>
+</view>
+<view class='pickercontent'>
+  <view class='{{aniType?"slidedown":"slideup"}}' wx:if="{{show}}" style="background:#fff;">
+    <view style="display:flex;justify-content:space-between;padding:0 42rpx 0 42rpx;height:100rpx;align-items:center;border: 1px solid #CCCCCC;">
+      <text bindtap="cancel" style="color: #999999;font-size:30rpx;">取消</text>
+      <text style='font-size:30rpx;'>选择{{areatype}}</text>  
+      <text style="color: #0086D1;font-size:30rpx;" bindtap="confirm">确定</text>     
+    </view>
+    <picker-view  indicator-style="height:50px;"  style="width:100%;height:440rpx;"  bindchange="handleNYZAreaChange" value="{{[10,0,0]}}">
+    <picker-view-column>
+      <view  wx:for="{{provinces}}" style="line-height:100rpx;text-align:center;font-size:30rpx;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view wx:for="{{citys}}" style="line-height:100rpx;text-align:center;font-size:30rpx;">{{item}}</view>
+    </picker-view-column>
+    <picker-view-column>
+      <view  wx:for="{{areas}}" style="line-height:100rpx;text-align:center;font-size:30rpx;">{{item}}</view>
+    </picker-view-column>
+  </picker-view>
+ </view>
+</view>

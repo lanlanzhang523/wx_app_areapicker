@@ -1,0 +1,8 @@
+<view class="title" bindtap="open">打开选择器</view>
+<input type="text" value="{{address}}"/>
+<areapicker
+	show="{{show}}"
+	aniType="{{show}}"
+	bind:confirm="confirm"
+>
+</areapicker>

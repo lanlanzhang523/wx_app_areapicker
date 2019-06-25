@@ -1,0 +1,6 @@
+{
+	"usingComponents": {
+    "areapicker": "/component/picker/picker"
+  }
+
+}
